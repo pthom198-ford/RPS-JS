@@ -27,13 +27,25 @@
     });
   });
 
-  describe ('in power saving mode', function() {
-    it ('the max temp is 25 degrees', function() {
+  describe ('the max temp', function() {
+    it ('in powersaving mode is 25 degrees', function() {
       powermode = true
       thermostat.temp = 25
       thermostat.uptemp()
       expect(thermostat.temp).toEqual(25)
     });
-
+    it ('is 32 degrees', function() {
+      powermode = false
+      thermostat.temp = 32
+      thermostat.uptemp()
+      expect(thermostat.temp).toEqual(32)
+    });
+    describe ('powersaving mode', function() {
+      it ('on by default', function() {
+      thermostat.temp = 25
+      thermostat.uptemp()
+      expect(thermostat.temp).toEqual(25)
+    });
+    });
   });
 });
