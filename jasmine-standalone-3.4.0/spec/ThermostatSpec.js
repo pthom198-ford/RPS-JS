@@ -10,12 +10,12 @@
     expect(thermostat.temp).toEqual(20)
     });
 
-    it ('can increase temp with up', function() {
+    it ('increase temp with up', function() {
     thermostat.uptemp()
     expect(thermostat.temp).toEqual(21)
     });
 
-    it ('can decrease temp with down', function() {
+    it ('decrease temp with down', function() {
     thermostat.downtemp()
     expect(thermostat.temp).toEqual(19)
     });
@@ -25,5 +25,15 @@
     thermostat.downtemp()
     expect(thermostat.temp).toEqual(10)
     });
+  });
+
+  describe ('in power saving mode', function() {
+    it ('the max temp is 25 degrees', function() {
+      powermode = true
+      thermostat.temp = 25
+      thermostat.uptemp()
+      expect(thermostat.temp).toEqual(25)
+    });
+
   });
 });
