@@ -25,6 +25,12 @@
     thermostat.downtemp()
     expect(thermostat.temp).toEqual(10)
     });
+
+    it ('reset temp to 20', function() {
+      thermostat.temp = 10
+      thermostat.reset()
+      expect(thermostat.temp).toEqual(20)
+    });
   });
 
   describe ('the max temp', function() {
@@ -46,6 +52,14 @@
       thermostat.uptemp()
       expect(thermostat.temp).toEqual(25)
     });
+    });
+    describe ('thermostats energy usage', function() {
+    it ('< 18 displays low-usage', function() {
+      thermoostat.temp = 17
+      thermostat.hello
+      expect(thermostat.energy).toEqual("low-usage")
+    });
+
     });
   });
 });

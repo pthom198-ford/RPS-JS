@@ -17,3 +17,7 @@ Thermostat.prototype.downtemp = function() {
   return this.temp = this.temp - 1;
   }
 };
+
+Thermostat.prototype.reset = function() {
+  this.temp = 20;
+};
