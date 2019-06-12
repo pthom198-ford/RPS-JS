@@ -11,7 +11,8 @@
     });
 
     it ('can increase temp with up', function() {
-    expect(thermostat.uptemp).toEqual(21)
+    thermostat.uptemp()
+    expect(thermostat.temp).toEqual(21)
 
     });
 
