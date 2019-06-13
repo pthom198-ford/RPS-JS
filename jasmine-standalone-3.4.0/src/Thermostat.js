@@ -1,6 +1,7 @@
 function Thermostat(temp) {
   this.temp = 20
   this.powermode = true
+  this.energy = "medium-usage"
 };
 
 Thermostat.prototype.uptemp = function() {
@@ -20,4 +21,18 @@ Thermostat.prototype.downtemp = function() {
 
 Thermostat.prototype.reset = function() {
   this.temp = 20;
+};
+
+Thermostat.prototype.hello = function() {
+  if (this.temp < 18) {
+    return this.energy = "low-usage";
+  } else if (this.temp > 18 && this.temp < 25) {
+    return this.energy = "medium-usage";
+  } else {
+    return this.energy = "high-usage";
+  };
+};
+
+Thermostat.prototype.pswitch = function(value) {
+  this.powermode === value
 };

@@ -41,7 +41,7 @@
       expect(thermostat.temp).toEqual(25)
     });
     it ('is 32 degrees', function() {
-      powermode = false
+      thermostat.pswitch(false)
       thermostat.temp = 32
       thermostat.uptemp()
       expect(thermostat.temp).toEqual(32)
@@ -51,12 +51,12 @@
       thermostat.temp = 25
       thermostat.uptemp()
       expect(thermostat.temp).toEqual(25)
-    });
+      });
     });
     describe ('thermostats energy usage', function() {
     it ('< 18 displays low-usage', function() {
-      thermoostat.temp = 17
-      thermostat.hello
+      thermostat.temp = 17
+      thermostat.hello()
       expect(thermostat.energy).toEqual("low-usage")
     });
 
