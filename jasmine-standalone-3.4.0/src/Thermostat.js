@@ -25,11 +25,11 @@ Thermostat.prototype.reset = function() {
 
 Thermostat.prototype.hello = function() {
   if (this.temp < 18) {
-    return this.energy = "low-usage";
-  } else if (this.temp > 18 && this.temp < 25) {
-    return this.energy = "medium-usage";
+    return this.energy = "low";
+  } else if (this.temp >= 18 && this.temp <= 25) {
+    return this.energy = "med";
   } else {
-    return this.energy = "high-usage";
+    return this.energy = "high";
   };
 };
 
@@ -71,5 +71,6 @@ $(document).ready(function() {
 
   function updateTemp() {
     $('#temperature').text(thermostat.temp);
+    $('#temperature').attr('class', thermostat.hello());
   };
 });

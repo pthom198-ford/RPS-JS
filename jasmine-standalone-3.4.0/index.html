@@ -7,6 +7,7 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="temperature.css">
 
   <title>Thermostat</title>
   <style>
@@ -18,10 +19,11 @@
       height: 50vh;
     }
 
-    .tempDisplay{
-      text-align: center;
-      font-size: 7vw;
+    .temperature{
+
+      color: white;
     }
+
 
     .arrow{
       font-size: 8vw;
@@ -61,8 +63,8 @@
   <div class="row">
     <div class="col-md-6 displayContainer">
       <div class="row">
-        <div class="col-md-12 tempDisplay">
-          <p id="temperature">23&#8451</p>
+        <div class="col-md-12 temperature">
+          <p id="temperature">20</p>
         </div>
 
       </div>
