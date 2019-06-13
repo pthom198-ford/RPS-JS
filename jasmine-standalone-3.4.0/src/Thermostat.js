@@ -37,4 +37,7 @@ Thermostat.prototype.pswitch = function(value) {
   this.powermode === value
 };
 
-console.log(19)
+$(document).ready(function() {
+  var thermostat = new Thermostat();
+  $('#temperature').text(thermostat.temp);
+})
