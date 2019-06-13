@@ -37,7 +37,10 @@ Thermostat.prototype.pswitch = function() {
   if(this.powermode === true){
   return this.powermode = false
 }else {
-  return this.powermode = true;
+  this.powermode = true
+  if (this.temp > 25) {
+  return this.temp = 25
+ }
 };
 
 
@@ -63,8 +66,7 @@ $(document).ready(function() {
 
   $('#psm').click(function() {
     thermostat.pswitch();
-    // $('#power-saving').text('on')
-    // updateTemperature();
+    updateTemp();
   })
 
   function updateTemp() {
