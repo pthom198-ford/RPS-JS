@@ -37,15 +37,20 @@ Thermostat.prototype.pswitch = function(value) {
   this.powermode === value
 };
 
+
+
 $(document).ready(function() {
   var thermostat = new Thermostat();
-  $('#temperature').text(thermostat.temp);
+  updateTemp();
   $('#temp-up').on('click', function(){
     thermostat.uptemp();
-  $('#temperature').text(thermostat.temp);
-  })
+    updateTemp();
+  });
   $('#temp-down').on('click', function(){
     thermostat.downtemp();
-  $('#temperature').text(thermostat.temp);
-  })
-})
+    updateTemp();
+  });
+  function updateTemp() {
+    $('#temperature').text(thermostat.temp);
+  };
+});
