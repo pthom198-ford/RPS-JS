@@ -40,4 +40,12 @@ Thermostat.prototype.pswitch = function(value) {
 $(document).ready(function() {
   var thermostat = new Thermostat();
   $('#temperature').text(thermostat.temp);
+  $('#temp-up').on('click', function(){
+    thermostat.uptemp();
+  $('#temperature').text(thermostat.temp);
+  })
+  $('#temp-down').on('click', function(){
+    thermostat.downtemp();
+  $('#temperature').text(thermostat.temp);
+  })
 })
