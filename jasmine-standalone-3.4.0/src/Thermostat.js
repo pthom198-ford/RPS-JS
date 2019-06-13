@@ -36,3 +36,5 @@ Thermostat.prototype.hello = function() {
 Thermostat.prototype.pswitch = function(value) {
   this.powermode === value
 };
+
+console.log(19)
