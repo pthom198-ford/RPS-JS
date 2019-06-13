@@ -33,8 +33,14 @@ Thermostat.prototype.hello = function() {
   };
 };
 
-Thermostat.prototype.pswitch = function(value) {
-  this.powermode === value
+Thermostat.prototype.pswitch = function() {
+  if(this.powermode === true){
+  return this.powermode = false
+}else {
+  return this.powermode = true;
+};
+
+
 };
 
 
@@ -54,6 +60,13 @@ $(document).ready(function() {
     thermostat.reset();
     updateTemp();
   });
+
+  $('#psm').click(function() {
+    thermostat.pswitch();
+    // $('#power-saving').text('on')
+    // updateTemperature();
+  })
+
   function updateTemp() {
     $('#temperature').text(thermostat.temp);
   };

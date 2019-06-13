@@ -41,7 +41,7 @@
       expect(thermostat.temp).toEqual(25)
     });
     it ('is 32 degrees', function() {
-      thermostat.pswitch(false)
+      thermostat.pswitch()
       thermostat.temp = 32
       thermostat.uptemp()
       expect(thermostat.temp).toEqual(32)
