@@ -3,13 +3,13 @@ function Rockpaper() {
 };
 
 Rockpaper.prototype.rock = function() {
- 'rock is selected'
+ return 'rock is selected';
 };
 
 Rockpaper.prototype.paper = function() {
- 'paper is selected'
+ return 'paper is selected';
 };
 
 Rockpaper.prototype.scissors = function() {
- 'scissors is selected'
+ return 'scissors is selected';
 };

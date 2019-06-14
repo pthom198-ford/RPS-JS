@@ -5,15 +5,15 @@ describe('Rockpaper', function() {
     rockpaper = new Rockpaper();
   });
 
-  describe ('Marketer is able to', function() {
+  describe ('Computer is able to', function() {
     it ('select rock', function() {
-      expect(rockpaper.rock).toBe('rock is selected')
+      expect(rockpaper.rock()).toBe('rock is selected');
     });
     it ('select paper', function() {
-      expect(rockpaper.paper).toBe('paper is selected')
+      expect(rockpaper.paper()).toBe('paper is selected');
     });
     it ('select scissors', function() {
-      expect(rockpaper.scissors).toBe('scissors is selected')
+      expect(rockpaper.scissors()).toBe('scissors is selected');
     });
 
   });
