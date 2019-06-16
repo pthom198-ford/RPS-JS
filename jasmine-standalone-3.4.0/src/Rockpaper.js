@@ -20,3 +20,15 @@ Rockpaper.prototype.play = function() {
   else draw
 
 };
+
+Rockpaper.prototype.won = function() {
+  return 'Computer beats Player'
+};
+
+Rockpaper.prototype.lose = function() {
+  return 'Player beats Computer'
+}
+
+Rockpaper.prototype.draw = function() {
+  return 'Its a draw'
+}
